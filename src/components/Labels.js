@@ -47,4 +47,23 @@ const newLabel = {
 labels.push(newLabel);
 };
 
+const LabelDropdown = ({ onSelectLabel }) => {
+    const handleLabelSelected = (event) => {
+      const selectedLabelId = parseInt(event.target.value);
+      const selectedLabel = labels.find((label) => label.id === selectedLabelId);
+      onSelectLabel(selectedLabel);
+    };
+  
+    return (
+      <select onChange={handleLabelSelected}>
+        <option value="">Select a label</option>
+        {labels.map((label) => (
+          <option key={label.id} value={label.id}>
+            {label.name}
+          </option>
+        ))}
+      </select>
+    );
+};
+
 export default Labels;

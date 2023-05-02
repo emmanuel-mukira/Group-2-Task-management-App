@@ -66,4 +66,20 @@ const LabelDropdown = ({ onSelectLabel }) => {
     );
 };
 
+const PriorityDropdown = ({ onSelectPriority }) => {
+    const handlePrioritySelected = (event) => {
+      const selectedPriority = event.target.value;
+      onSelectPriority(selectedPriority);
+    };
+  
+    return (
+      <select onChange={handlePrioritySelected}>
+        <option value="low">Low priority</option>
+        <option value="medium">Medium priority</option>
+        <option value="high">High priority</option>
+      </select>
+    );
+  };
+  
+
 export default Labels;

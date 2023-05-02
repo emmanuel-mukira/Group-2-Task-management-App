@@ -47,6 +47,30 @@ const newLabel = {
 labels.push(newLabel);
 };
 
+const AddLabelForm = ({ onLabelAdded }) => {
+    const [newLabel, setNewLabel] = React.useState('');
+  
+    const handleNewLabelChange = (event) => {
+      setNewLabel(event.target.value);
+    };
+  
+    const handleFormSubmit = (event) => {
+      event.preventDefault();
+      addNewLabel(newLabel);
+      onLabelAdded();
+    };
+  
+    return (
+      <form onSubmit={handleFormSubmit}>
+        <label>
+          New label:
+          <input type="text" value={newLabel} onChange={handleNewLabelChange} />
+        </label>
+        <button type="submit">Add label</button>
+      </form>
+    );
+  };
+  
 const LabelDropdown = ({ onSelectLabel }) => {
     const handleLabelSelected = (event) => {
       const selectedLabelId = parseInt(event.target.value);

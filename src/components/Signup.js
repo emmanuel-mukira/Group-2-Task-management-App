@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 
+
 function SignUp({ onSignUp, addNewUser, loginUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  
+  
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
@@ -27,6 +29,7 @@ function SignUp({ onSignUp, addNewUser, loginUser }) {
       })
       .then(() => {
         onSignUp();
+        window.alert('You have successfully signed up! Now you can log in.');
       })
       .catch((error) => {
         console.error(error);
@@ -36,7 +39,7 @@ function SignUp({ onSignUp, addNewUser, loginUser }) {
 
   return (
     <div>
-      <h2>Sign up</h2>
+      <h1>Sign up</h1>
       <form onSubmit={handleFormSubmit}>
         <div>
           <label>Username:</label>
@@ -46,10 +49,10 @@ function SignUp({ onSignUp, addNewUser, loginUser }) {
           <label>Password:</label>
           <input type="password" value={password} onChange={handlePasswordChange} />
         </div>
-        <button type="submit">Sign up</button>
+        <button type="submit" >Sign up</button>
       </form>
       <p>
-        Already have an account? <a href="#login">Login</a>
+        Already have an account? <a href="/login" > Login</a>
       </p>
     </div>
   );

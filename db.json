@@ -64,6 +64,16 @@
       "username": "Shigi",
       "password": "1234",
       "id": 3
+    },
+    {
+      "username": "Emmanuel",
+      "password": "4567",
+      "id": 4
+    },
+    {
+      "username": "Bobby",
+      "password": "bobby",
+      "id": 15
     }
   ]
 }

@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
-//import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Login from "./components/Login";
-import SignUp from "./components/Signup";
 
-function App () {
+import React,{useState,useEffect} from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './components/Home';
+import SignUp from './components/Signup';
+import Login from './components/Login';
+
+function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [showLogin, setShowLogin] = useState(true);
   const [users, setUsers] = useState([]);
@@ -16,34 +18,43 @@ function App () {
 
   const handleLogin = (user) => {
     setCurrentUser(user);
-  };
-
-  const handleSignUp = () => {
     setShowLogin(true);
   };
 
-  const handleToggleForm = () => {
-    setShowLogin(!showLogin);
+  const handleSignUp = () => {
+    setShowLogin(false);
   };
-
   return (
-    <div>
-      {currentUser ? (
-        <p>Welcome, {currentUser.username}!</p>
-      ) : (
-        showLogin ? (
-          <Login users={users} onLogin={handleLogin} onSignUp={handleSignUp} />
-        ) : (
-          <SignUp onSignUp={handleSignUp} />
-        )
-      )}
-      <button onClick={handleToggleForm}>
-        {showLogin ? 'Sign up' : 'Login'}
-      </button>
-    </div>
+    
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/signup">Sign Up</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home currentUser={currentUser} />} />
+        <Route path="/signup" element={<SignUp onSignUp={handleSignUp}/>} />
+        <Route
+         path="/login" 
+         element={
+         <Login users={users} 
+         onLogin={handleLogin} 
+         onSignUp={handleSignUp} 
+         setCurrentUser={setCurrentUser}
+         />} />
+      </Routes>
+    </Router>
   );
 }
-
-
 
 export default App;

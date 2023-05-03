@@ -47,6 +47,30 @@
         "Household",
         "Chores"
       ]
+    },
+    {
+      "title": "New",
+      "description": "nuwjdldlm",
+      "due_date": "2023-05-19",
+      "priority": "Medium",
+      "completed": false,
+      "assigned_to": {
+        "username": "",
+        "password": ""
+      },
+      "id": 4
+    },
+    {
+      "title": "HDBHJB",
+      "description": "hjbhjb",
+      "due_date": "2023-05-12",
+      "priority": "Medium",
+      "completed": false,
+      "assigned_to": {
+        "id": 1,
+        "username": "john_doe"
+      },
+      "id": 5
     }
   ],
   "users": [

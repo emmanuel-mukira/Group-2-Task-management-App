@@ -5,6 +5,7 @@ import Home from './components/Home';
 import SignUp from './components/Signup';
 import Login from './components/Login';
 
+
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [showLogin, setShowLogin] = useState(true);
@@ -25,7 +26,6 @@ function App() {
     setShowLogin(false);
   };
   return (
-    
     <Router>
       <nav>
         <ul>

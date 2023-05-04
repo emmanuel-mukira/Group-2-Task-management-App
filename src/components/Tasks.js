@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TaskDisplay from './TaskDisplay';
-
+import "./Tasks.css";
 function Task({ userId , onTaskCreated,username }) {
   const [tasks, setTasks] = useState([]);
   const [editingTask, setEditingTask] = useState(null);

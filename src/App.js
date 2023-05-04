@@ -21,9 +21,11 @@ function App() {
   };
   return (
     <div className='homepage'>
-      <h4>Welcome to</h4>
-      <h1>todo.<span>Task</span></h1>
-      <h2>Achieve more with us on your side.</h2>
+      <p className='log-in details'>Logged in as,{currentUser && <h1>{currentUser.username}</h1>}</p>
+      <div className='title'>
+        <h1>todo.<span>Task</span></h1>
+        <h2>Achieve more.</h2>
+      </div>
       <Router>
         <nav>
           <ul>

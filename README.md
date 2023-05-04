@@ -1,29 +1,34 @@
-# Task-management-App
+# todo.TASK
 *****
 ### Author : EMMANUEL MUKIRA, FAITH MWANGI, VICTOR IRERI, KENNEDY MBUGUA
 ****
 ## Project Description
+Task-Management-App
 -The goal of this project was to make a Task Management App using React.
 -The app has the following functionalities:
-   1. User logs in or signs up for an account.
-   2. User is redirected to the tasks component, which displays a list of all tasks.
-   3. User can click on a task to view its details, or click on a button to create a new task.
-   4. User can navigate to the projects or labels component to view, create, edit, or delete  projects or labels.
-   5. User can filter tasks by project or label, and mark tasks as complete or incomplete.
-   6. User can log out of the app.
+As a user I can:
+   Log in or sign up for an account.
+   Redirect to the tasks component, and add a new task. 
+   Scroll down to a display of all the task tasks.
+   Filter tasks by username.
 
 ## SCREENSHOTS
-- link 1
-- link 2
+Create an account.
+- <img width="1425" alt="Screenshot 2023-05-04 at 15 52 28" src="https://user-images.githubusercontent.com/126608910/236211723-918d5fec-0fb3-4a17-8936-826027014208.png">
+Log in.
+- <img width="1425" alt="Screenshot 2023-05-04 at 15 52 38" src="https://user-images.githubusercontent.com/126608910/236211918-7e5921df-c8f8-498a-95da-996676c10b0f.png">
+Add a new task.
+-<img width="1425" alt="Screenshot 2023-05-04 at 15 52 47" src="https://user-images.githubusercontent.com/126608910/236212021-ebb010be-e4ae-45ac-b402-f111e99777ef.png">
+View list of previous tasks.
+-<img width="1425" alt="Screenshot 2023-05-04 at 15 52 54" src="https://user-images.githubusercontent.com/126608910/236212116-068c9889-e55f-4feb-a812-feba6eb74a55.png">
 
 
 ********
 ## SetUp Instruction
 ### Requirements
-* [Lang](english)
-* [Framework](Framework URL)
-* Text editor eg [Visual Studio Code](https://code.visualstudio.com/download)
-* [Testing Platform](Platform URL)
+* Node.js
+* React
+* Text editor eg Visual Studio Code)
 
 
 ### Getting Files
@@ -54,6 +59,7 @@ Or you can access the web application directly via this []()
 1. HTML
 2. CSS
 3. JavaScript
+4. React
 *****
 ## Contact Information
 * Email : emmanuelgichigo@gmail.com 

@@ -6,8 +6,8 @@ export default function TaskDisplay({tasks,handleDeleteClick,handleEditClick}) {
   }
 
   return (
-    <div>
-      <h3 className="task-display">Task List</h3>
+    <div className="task-display">
+      <h3 >TASK<span>list</span></h3>
         <table className="task-table">
           <thead>
             <tr>

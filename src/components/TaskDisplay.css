@@ -1,13 +1,23 @@
+.task-display h3{
+font-size: 50px;
+color: #f8b400;
+}
+.task-display span{
+  color:  #2c786c;
+}
 .task-display {
-    font-size: 24px;
-    margin-bottom: 450px;
+    font-size: 18px;
   }
   
   .task-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 24px;
+    border-radius: 7px;
+    border-color: #f8b400;
+    border-width: 2px;
   }
+
   
   .task-table th {
     text-align: left;
@@ -29,7 +39,7 @@
   }
   
   .task-table button {
-    background-color: #4CAF50;
+    background-color:  #004445;
     color: white;
     border: none;
     padding: 8px 16px;

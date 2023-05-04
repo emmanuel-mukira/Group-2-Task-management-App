@@ -54,6 +54,7 @@ function Login({ users, onLogin, onSignUp, setCurrentUser }) {
           <label>Password:</label>
           <input type="password" value={password} onChange={handlePasswordChange} />
         </div>
+        <br/>
         <button type="submit">Login</button>
       </form>
       <p>Don't have an account? <a href="/signup" ><span>Sign up</span></a></p>

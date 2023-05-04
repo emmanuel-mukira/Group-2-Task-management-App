@@ -1,0 +1,51 @@
+.signup form{
+    text-align: center;
+    font-size: 30px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    margin-top: 150px;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 10px rgba(8,7,16,0.6);
+    padding: 30px 35px;
+    text-align: center;
+    margin-right: 50px;
+}
+.signup form h2{
+    font-size: 40px;
+    color: #004445;
+}
+.signup form label{
+    font-size: 30px;
+}
+
+.signup form input{
+    border-radius: 5px;
+    padding: 5px 15px;
+    
+}
+.signup form button{
+    padding: 5px 15px;
+    font-size: 18px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: aliceblue;
+    background-color:  #2c786c;
+    border-radius: 3px;
+}
+.signup button:hover{
+    background-color: #004445;
+}
+.signup p{
+    float: right;
+}
+.signup span{
+    color: #2c786c;
+}

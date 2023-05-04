@@ -1,6 +1,7 @@
 .task-display h3{
 font-size: 50px;
 color: #f8b400;
+margin-bottom: 25px;
 }
 .task-display span{
   color:  #2c786c;
@@ -17,12 +18,17 @@ color: #f8b400;
     border-color: #f8b400;
     border-width: 2px;
   }
-
+.search-container input{
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-radius: 7px;
+}
   
   .task-table th {
     text-align: left;
     padding: 12px 16px;
     background-color: #f2f2f2;
+    padding: 5px 20px;
   }
   
   .task-table td {

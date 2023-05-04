@@ -17,6 +17,10 @@ function Home({ currentUser }) {
       }, [currentUser]);
       
     const handleTaskCreated = (newTask) => {
+      if (!currentUser) {
+        alert("You need to be logged in to add a task.");
+        return;
+      }
       setTasks([...tasks, newTask]);
     };
   
@@ -24,13 +28,12 @@ function Home({ currentUser }) {
       <div>
         {currentUser && <h2>Welcome {currentUser.username}</h2>}
         <Task
-            currentUser={currentUser}
           userId={currentUser?.id}
           onTaskCreated={handleTaskCreated}
           setTasks={setTasks} // pass down setTasks function as a prop
         />
-        <TaskDisplay tasks={tasks} currentUser={currentUser} />
-      </div>
+        
+              </div>
     );
   }
   

@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-function Task({ userId }) {
+function Task({ userId , onTaskCreated }) {
   const [tasks, setTasks] = useState([]);
-  const [editingTask, setEditingTask] = useState({
-    id: '',
-    title: '',
-    description: '',
-    due_date: '',
-    priority: 'low',
-    completed: false,
-    assigned_to: userId,
-});
+  const [editingTask, setEditingTask] = useState(null);
 
   const [newTask, setNewTask] = useState({
     title: '',
@@ -31,7 +23,6 @@ function Task({ userId }) {
     setEditingTask({ ...task });
   };
   
-
   const handleDeleteClick = (id) => {
     fetch(`http://localhost:3000/tasks/${id}`, {
       method: 'DELETE',
@@ -55,7 +46,6 @@ function Task({ userId }) {
     });
   };
   
-
   const handleCompletedChange = (event) => {
     setNewTask({
       ...newTask,
@@ -63,7 +53,6 @@ function Task({ userId }) {
     });
   };
   
-
   const handleSubmit = (event) => {
     event.preventDefault();
     fetch("http://localhost:3000/tasks", {
@@ -84,13 +73,12 @@ function Task({ userId }) {
           assigned_to: userId,
         });
         setTasks([...tasks, data]); // call setTasks to update the state variable
-        if (setTasks) {
-          setTasks((tasks) => [...tasks, data]);
+        if (onTaskCreated) {
+          onTaskCreated(data);
         }
       });
   };
   
-
   const handleEditSubmit = (event, id) => {
     event.preventDefault();
     fetch(`http://localhost:3000/tasks/${id}`, {
@@ -122,11 +110,11 @@ function Task({ userId }) {
   return (
     <div>
       <h2>Tasks</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={editingTask ? (event) => handleEditSubmit(event, editingTask.id) : handleSubmit}>
         <input
           type="text"
           name="title"
-          value={newTask.title}
+          value={editingTask ? editingTask.title : newTask.title}
           onChange={handleTaskInputChange}
           placeholder="Task Title"
           required
@@ -134,52 +122,89 @@ function Task({ userId }) {
         <br />
         <textarea
           name="description"
-          value={newTask.description}
+          value={editingTask ? editingTask.description : newTask.description}
           onChange={handleTaskInputChange}
           placeholder="Task Description"
           required
-        />
-        <br />
-        <label>
-          Due Date:
-          <input
-            type="date"
-            name="due_date"
-            value={newTask.due_date}
-            onChange={handleTaskInputChange}
-            required
           />
-        </label>
-        <br />
-        <label>
-            Priority 
+          <br />
+          <label>
+            Due Date:
+            <input
+              type="date"
+              name="due_date"
+              value={editingTask ? editingTask.due_date : newTask.due_date}
+              onChange={handleTaskInputChange}
+              required
+            />
+          </label>
+          <br />
+          <label>
+            Priority:
             <select
-          name="priority"
-          value={editingTask.priority}
-          onChange={handlePriorityChange}
-        >
-          <option value="Low">Low</option>
-          <option value="Medium">Medium</option>
-          <option value="High">High</option>
-        </select>
-        </label>
-        <label>
-        Completed:
-        </label>
-        <input
-          type="checkbox"
-          name="completed"
-          checked={editingTask.completed}
-          onChange={handleCompletedChange}
-        />
-        <br/>
+              name="priority"
+              value={editingTask ? editingTask.priority : newTask.priority}
+              onChange={handlePriorityChange}
+            >
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </label>
+          <br />
+          <label>
+            Completed:
+            <input
+              type="checkbox"
+              name="completed"
+              checked={editingTask ? editingTask.completed : newTask.completed}
+              onChange={handleCompletedChange}
+            />
+          </label>
+          <br />
+          <br />
+          <button type="submit">
+            {editingTask ? "Update" : "Create"}
+          </button>
+          {editingTask && (
+            <button type="button" onClick={handleCancelClick}>
+              Cancel
+            </button>
+          )}
+        </form>
         <br />
-      <button type="submit">Save</button>
-      <button type="button" onClick={handleCancelClick}>
-        Cancel
-      </button>
-      </form>
+        <h3>Task List</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Due Date</th>
+              <th>Priority</th>
+              <th>Completed</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tasks.map((task) => (
+              <tr key={task.id}>
+                <td>{task.title}</td>
+                <td>{task.description}</td>
+                <td>{task.due_date}</td>
+                <td>{task.priority}</td>
+                <td>{task.completed ? "Yes" : "No"}</td>
+                <td>
+                  <button onClick={() => handleEditClick(task)}>Edit</button>
+                  <button onClick={() => handleDeleteClick(task.id)}>
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-)
+);
 }
+
 export default Task;

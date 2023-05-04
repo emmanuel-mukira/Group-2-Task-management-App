@@ -7,10 +7,7 @@
       "due_date": "2023-05-10",
       "priority": "high",
       "completed": false,
-      "assigned_to": {
-        "username": "johndoe",
-        "password": "password123"
-      },
+      "assigned_to": 1,
       "labels": [
         "Groceries",
         "Shopping"
@@ -23,10 +20,7 @@
       "due_date": "2023-06-01",
       "priority": "medium",
       "completed": false,
-      "assigned_to": {
-        "username": "janesmith",
-        "password": "qwerty456"
-      },
+      "assigned_to": 2,
       "labels": [
         "Work",
         "Project"
@@ -39,38 +33,54 @@
       "due_date": "2023-05-15",
       "priority": "low",
       "completed": true,
-      "assigned_to": {
-        "username": "johndoe",
-        "password": "password123"
-      },
+      "assigned_to": 1,
       "labels": [
         "Household",
         "Chores"
       ]
     },
     {
+      "id": 4,
       "title": "New",
-      "description": "nuwjdldlm",
-      "due_date": "2023-05-19",
-      "priority": "Medium",
+      "description": "jdbsnhj",
+      "due_date": "2023-05-18",
+      "priority": "High",
       "completed": false,
-      "assigned_to": {
-        "username": "",
-        "password": ""
-      },
-      "id": 4
+      "assigned_to": 3,
+      "labels": []
     },
     {
-      "title": "HDBHJB",
-      "description": "hjbhjb",
-      "due_date": "2023-05-12",
-      "priority": "Medium",
-      "completed": false,
-      "assigned_to": {
-        "id": 1,
-        "username": "john_doe"
-      },
+      "title": "bhjdnd",
+      "description": "ngfjnfdjk",
+      "due_date": "2023-05-18",
+      "priority": "medium",
+      "completed": true,
       "id": 5
+    },
+    {
+      "title": "jkfd n",
+      "description": "klmv  ",
+      "due_date": "2023-05-10",
+      "priority": "low",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "title": "erkjn",
+      "description": "klmgklm",
+      "due_date": "2023-05-18",
+      "priority": "low",
+      "completed": false,
+      "assigned_to": 15,
+      "id": 7
+    },
+    {
+      "title": "eseff",
+      "description": "hgghv",
+      "due_date": "2023-05-28",
+      "priority": "low",
+      "completed": false,
+      "id": 8
     }
   ],
   "users": [
@@ -85,19 +95,29 @@
       "password": "qwerty456"
     },
     {
+      "id": 3,
       "username": "Shigi",
-      "password": "1234",
-      "id": 3
+      "password": "1234"
     },
     {
+      "id": 4,
       "username": "Emmanuel",
-      "password": "4567",
-      "id": 4
+      "password": "4567"
     },
     {
+      "id": 15,
       "username": "Bobby",
-      "password": "bobby",
-      "id": 15
+      "password": "bobby"
+    },
+    {
+      "id": 16,
+      "username": "eric",
+      "password": "12345678"
+    },
+    {
+      "username": "Kitonyi",
+      "password": "12345",
+      "id": 17
     }
   ]
 }

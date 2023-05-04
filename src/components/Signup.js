@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import './Signup.css';
 
 function SignUp({ onSignUp, addNewUser, loginUser }) {
   const [username, setUsername] = useState("");
@@ -38,21 +38,24 @@ function SignUp({ onSignUp, addNewUser, loginUser }) {
   
 
   return (
-    <div>
-      <h1>Sign up</h1>
+    <div className="signup">
+      
       <form onSubmit={handleFormSubmit}>
+      <h2>Create Account</h2>
         <div>
           <label>Username:</label>
           <input type="text" value={username} onChange={handleUsernameChange} />
         </div>
+        <br/>
         <div>
           <label>Password:</label>
           <input type="password" value={password} onChange={handlePasswordChange} />
         </div>
-        <button type="submit" >Sign up</button>
+        <br/>
+        <button type="submit" >Create Account</button>
       </form>
       <p>
-        Already have an account? <a href="/login" > Login</a>
+        Already have an account? <a href="/login" ><span>Login</span></a>
       </p>
     </div>
   );

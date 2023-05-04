@@ -36,3 +36,60 @@
     transform: rotate(360deg);
   }
 }
+body{
+  background-color: #f9f8f6;
+}
+.title{
+  text-align: center;
+}
+.title h1{
+  font-size: 170px;
+  margin-top: 6%;
+  color: #2c786c;;
+}
+.title h1 span{
+  color: #004445;
+}
+.title h2{
+  margin-top: -70px;
+}
+.homepage p{
+  float: right;
+  margin-top: -70px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 100px;
+}
+.homepage ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.homepage nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 5%;
+}
+
+.homepage ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage li {
+  margin: 0 20px;
+}
+
+.homepage a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.homepage a:hover {
+  text-decoration: underline;
+  color: #004445;
+}

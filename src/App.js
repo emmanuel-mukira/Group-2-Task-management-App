@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import SignUp from './components/Signup';
 import Login from './components/Login';
+import './App.css';
+
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [showLogin, setShowLogin] = useState(true);
@@ -21,17 +23,20 @@ function App() {
   };
   return (
     <div className='homepage'>
-      <h4>Welcome to</h4>
-      <h1>todo.<span>Task</span></h1>
-      <h2>Achieve more with us on your side.</h2>
+      <p className='log-in details'>Logged in as,{currentUser && <h1>{currentUser.username}</h1>}</p>
+      <div className='title'>
+        <h1>todo.<span>Task</span></h1>
+        <h2>Achieve more.</h2>
+      </div>
+      
       <Router>
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Sign Up</Link>
             </li>
             <li>
-              <Link to="/signup">Sign Up</Link>
+              <Link to="/tasks">Tasks</Link>
             </li>
             <li>
               <Link to="/login">Login</Link>
@@ -39,8 +44,8 @@ function App() {
           </ul>
         </nav>
         <Routes>
-          <Route path="/" element={<Home currentUser={currentUser} />} />
-          <Route path="/signup" element={<SignUp onSignUp={handleSignUp}/>} />
+          <Route path="/" element={<SignUp onSignUp={handleSignUp}/>} />
+          <Route path="/tasks" element={<Home currentUser={currentUser} />} />
           <Route
           path="/login"
           element={

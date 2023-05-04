@@ -1,14 +1,26 @@
+.tasks form{
+  width: 500px;
+  margin: 30px auto;
+  border-top: solid 8px #f8b400 ;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(8,7,16,0.6);
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  
+}
 .tasks-title {
     font-size: 24px;
     margin-bottom: 10px;
   }
-  
-  .tasks-form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+  .tasks label{
+    font-size: 20px;
+    font-weight: bold;
   }
-  
   .tasks-form input,
   .tasks-form textarea,
   .tasks-form select,
@@ -16,18 +28,78 @@
     margin-bottom: 10px;
     font-size: 16px;
     padding: 5px;
+    position: relative;
+    border-radius: 3px;
+    margin: 5px 10px 5px 0;
+    line-height: 1.4;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+
   }
-  
-  .tasks-form input[type="checkbox"] {
-    margin-top: 10px;
+  .tasks-form input,
+  .tasks-form textarea{
+    width: 100%;
+    
   }
-  
+  input:focus {
+    outline: 0;
+    border-color: #bd8200;
+  }
+  input:focus + .input-icon i {
+    color: #f0a500;
+  }
+  input:focus + .input-icon:after {
+    border-right-color: #f0a500;
+  }
+ 
+  input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 1.6em;
+  }
+  input[type="checkbox"] + label:before {
+    position: absolute;
+    top: 0.2em;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    padding: 0;
+    content: "";
+  }
+  input[type="checkbox"] + label:after {
+    position: absolute;
+    top: 0.45em;
+    left: 0.2em;
+    font-size: 0.8em;
+    color: #fff;
+    opacity: 0;
+    font-family: FontAwesome;
+    content: "\f00c";
+  }
+  input:checked + label:after {
+    opacity: 1;
+  }
+  .tasks-form input,
+  .tasks-form select{
+    padding: 0px 20px;
+  }
+  input[type="date"]{
+    padding:0px 20px;
+    width: 120px;
+
+  }
   .tasks-form button[type="submit"],
   .tasks-form button[type="button"] {
     margin-top: 10px;
+    margin-left: 200px;
     padding: 5px 10px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color: #004445;
     color: white;
     border: none;
     border-radius: 5px;
@@ -36,7 +108,8 @@
   
   .tasks-form button[type="submit"]:hover,
   .tasks-form button[type="button"]:hover {
-    background-color: #3e8e41;
+    background-color: #2c786c;
+
   }
   
   .tasks-form button[type="submit"]:disabled {

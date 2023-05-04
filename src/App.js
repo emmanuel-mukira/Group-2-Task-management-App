@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import SignUp from './components/Signup';
 import Login from './components/Login';
+import './App.css';
+
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [showLogin, setShowLogin] = useState(true);
@@ -26,6 +28,7 @@ function App() {
         <h1>todo.<span>Task</span></h1>
         <h2>Achieve more.</h2>
       </div>
+      
       <Router>
         <nav>
           <ul>

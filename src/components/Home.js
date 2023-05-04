@@ -36,7 +36,7 @@ function Home({ currentUser }) {
         onTaskCreated={handleTaskCreated}
         setTasks={setTasks} // pass down setTasks function as a prop
       />
-      
+      <TaskDisplay/>
     </div>
   );
 }

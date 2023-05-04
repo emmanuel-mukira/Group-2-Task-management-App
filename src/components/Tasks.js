@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import TaskDisplay from './TaskDisplay';
 
 function Task({ userId , onTaskCreated,username }) {
   const [tasks, setTasks] = useState([]);
@@ -174,38 +175,8 @@ function Task({ userId , onTaskCreated,username }) {
           )}
         </form>
         <br />
-        <h3>Task List</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Description</th>
-              <th>Due Date</th>
-              <th>Priority</th>
-              <th>Completed</th>
-              <th>Assigned to</th>
-              <th>Action</th>
-              
-            </tr>
-          </thead>
-          <tbody>
-           {tasks.map((task) => (
-  <tr key={task.id}>
-    <td>{task.title}</td>
-    <td>{task.description}</td>
-    <td>{task.due_date}</td>
-    <td>{task.priority}</td>
-    <td>{task.completed ? 'Yes' : 'No'}</td>
-    <td>{task.assigned_to}</td>
-    <td>
-      <button onClick={() => handleEditClick(task)}>Edit</button>
-      <button onClick={() => handleDeleteClick(task.id)}>Delete</button>
-    </td>
-  </tr>
-))}
-
-          </tbody>
-        </table>
+{<TaskDisplay handleDeleteClick={handleDeleteClick} tasks={tasks} handleEditClick={handleEditClick}/>}
+          
       </div>
 );
 }

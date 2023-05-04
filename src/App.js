@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import SignUp from './components/Signup';
 import Login from './components/Login';
+import "./App.css";
+
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [showLogin, setShowLogin] = useState(true);
@@ -21,6 +23,7 @@ function App() {
   };
   return (
     <div className='homepage'>
+      <p className='log-in details'>Logged in as,{currentUser && <h1>{currentUser.username}</h1>}</p>
       <h4>Welcome to</h4>
       <h1>todo.<span>Task</span></h1>
       <h2>Achieve more with us on your side.</h2>

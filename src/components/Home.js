@@ -29,7 +29,7 @@ function Home({ currentUser }) {
 
   return (
     <div>
-      {currentUser && <h2>Welcome {currentUser.username}</h2>}
+      
       <Task
         userId={currentUser?.id}
         username={currentUser?.username}

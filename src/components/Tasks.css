@@ -1,0 +1,51 @@
+.tasks-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .tasks-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .tasks-form input,
+  .tasks-form textarea,
+  .tasks-form select,
+  .tasks-form label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  .tasks-form input[type="checkbox"] {
+    margin-top: 10px;
+  }
+  
+  .tasks-form button[type="submit"],
+  .tasks-form button[type="button"] {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .tasks-form button[type="submit"]:hover,
+  .tasks-form button[type="button"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  .tasks-form button[type="submit"]:disabled {
+    background-color: #ddd;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .tasks-form button[type="submit"]:disabled:hover {
+    background-color: #ddd;
+  }
+  

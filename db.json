@@ -1,58 +1,117 @@
 {
   "tasks": [
-     {
-        "id": 1,
-        "title": "Buy groceries",
-        "description": "Pick up milk, bread, and eggs from the store.",
-        "due_date": "2023-05-10",
-        "priority": "high",
-        "completed": false,
-        "assigned_to": {
-           "id": 1,
-           "name": "John Doe",
-           "email": "john.doe@example.com"
-        },
-        "labels": ["Groceries", "Shopping"]
-     },
-     {
-        "id": 2,
-        "title": "Finish project",
-        "description": "Complete the final report and submit it to the client.",
-        "due_date": "2023-06-01",
-        "priority": "medium",
-        "completed": false,
-        "assigned_to": {
-           "id": 2,
-           "name": "Jane Smith",
-           "email": "jane.smith@example.com"
-        },
-        "labels": ["Work", "Project"]
-     },
-     {
-        "id": 3,
-        "title": "Clean the house",
-        "description": "Vacuum the carpets, dust the furniture, and mop the floors.",
-        "due_date": "2023-05-15",
-        "priority": "low",
-        "completed": true,
-        "assigned_to": {
-           "id": 1,
-           "name": "John Doe",
-           "email": "john.doe@example.com"
-        },
-        "labels": ["Household", "Chores"]
-     }
+    {
+      "id": 1,
+      "title": "Buy groceries",
+      "description": "Pick up milk, bread, and eggs from the store.",
+      "due_date": "2023-05-10",
+      "priority": "high",
+      "completed": false,
+      "assigned_to": "johndoe",
+      "labels": [
+        "Groceries",
+        "Shopping"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Finish project",
+      "description": "Complete the final report and submit it to the client.",
+      "due_date": "2023-06-01",
+      "priority": "medium",
+      "completed": false,
+      "assigned_to": "janesmith",
+      "labels": [
+        "Work",
+        "Project"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clean the house",
+      "description": "Vacuum the carpets, dust the furniture, and mop the floors.",
+      "due_date": "2023-05-15",
+      "priority": "low",
+      "completed": true,
+      "assigned_to": "johndoe",
+      "labels": [
+        "Household",
+        "Chores"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "New",
+      "description": "jdbsnhj",
+      "due_date": "2023-05-18",
+      "priority": "High",
+      "completed": false,
+      "assigned_to": "Shigi",
+      "labels": []
+    },
+    {
+      "title": "erkjn",
+      "description": "klmgklm",
+      "due_date": "2023-05-18",
+      "priority": "low",
+      "completed": false,
+      "assigned_to": "Bobby",
+      "id": 7
+    },
+    {
+      "title": "new",
+      "description": "newest",
+      "due_date": "2023-05-19",
+      "priority": "medium",
+      "completed": false,
+      "assigned_to": "Emmanuel",
+      "id": 8
+    },
+    {
+      "title": "djndsk",
+      "description": "klmvmdl",
+      "due_date": "2023-05-27",
+      "priority": "high",
+      "completed": false,
+      "assigned_to": "Shigi",
+      "id": 9
+    }
   ],
   "users": [
-   {
-     "id": 1,
-     "username": "johndoe",
-     "password": "password123"
-   },
-   {
-     "id": 2,
-     "username": "janesmith",
-     "password": "qwerty456"
-   }
- ]
-} 
+    {
+      "id": 1,
+      "username": "johndoe",
+      "password": "password123"
+    },
+    {
+      "id": 2,
+      "username": "janesmith",
+      "password": "qwerty456"
+    },
+    {
+      "id": 3,
+      "username": "Shigi",
+      "password": "1234"
+    },
+    {
+      "id": 4,
+      "username": "Emmanuel",
+      "password": "4567"
+    },
+    {
+      "id": 15,
+      "username": "Bobby",
+      "password": "bobby"
+    },
+    {
+      "id": 16,
+      "username": "eric",
+      "password": "12345678"
+    },
+    {
+      "username": "Kitonyi",
+      "password": "12345",
+      "id": 17
+    }
+  ]
+}

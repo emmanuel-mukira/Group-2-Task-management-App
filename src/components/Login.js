@@ -1,9 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Login({ users, onLogin, onSignUp }) {
+function Login({ users, onLogin, onSignUp, setCurrentUser }) {
+  console.log(setCurrentUser);
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -18,6 +22,8 @@ function Login({ users, onLogin, onSignUp }) {
     const user = findUser(username, password);
     if (user) {
       onLogin(user);
+      setCurrentUser(user);
+      navigate('/');
     } else {
       setError('Invalid username or password');
     }
@@ -47,7 +53,7 @@ function Login({ users, onLogin, onSignUp }) {
         </div>
         <button type="submit">Login</button>
       </form>
-      <p>Don't have an account? <a href="#signup" onClick={handleSignUpClick}>Sign up</a></p>
+      <p>Don't have an account? <a href="/signup" >Sign up</a></p>
     </div>
   );
 }

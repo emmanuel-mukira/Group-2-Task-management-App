@@ -26,7 +26,6 @@ export default function TaskDisplay({tasks,handleDeleteClick,handleEditClick}) {
             <th>Description</th>
             <th>Due Date</th>
             <th>Priority</th>
-            <th>Completed</th>
             <th>Assigned to</th>
             <th>Action</th>
           </tr>
@@ -38,10 +37,8 @@ export default function TaskDisplay({tasks,handleDeleteClick,handleEditClick}) {
               <td>{task.description}</td>
               <td>{task.due_date}</td>
               <td>{task.priority}</td>
-              <td>{task.completed ? 'Yes' : 'No'}</td>
               <td>{task.assigned_to}</td>
               <td>
-                <button onClick={() => handleEditClick(task)}>Edit</button>
                 <button onClick={() => handleDeleteClick(task.id)}>Delete</button>
               </td>
             </tr>

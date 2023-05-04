@@ -33,10 +33,10 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Sign Up</Link>
             </li>
             <li>
-              <Link to="/signup">Sign Up</Link>
+              <Link to="/tasks">Tasks</Link>
             </li>
             <li>
               <Link to="/login">Login</Link>
@@ -44,8 +44,8 @@ function App() {
           </ul>
         </nav>
         <Routes>
-          <Route path="/" element={<Home currentUser={currentUser} />} />
-          <Route path="/signup" element={<SignUp onSignUp={handleSignUp}/>} />
+          <Route path="/" element={<SignUp onSignUp={handleSignUp}/>} />
+          <Route path="/tasks" element={<Home currentUser={currentUser} />} />
           <Route
           path="/login"
           element={

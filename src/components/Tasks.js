@@ -154,16 +154,6 @@ function Task({ userId , onTaskCreated,username }) {
             </select>
           </label>
           <br />
-          <label>
-            Completed:
-            <input
-              type="checkbox"
-              name="completed"
-              checked={editingTask ? editingTask.completed : newTask.completed}
-              onChange={handleCompletedChange}
-            />
-          </label>
-          <br />
           <br />
           <button type="submit">
             {editingTask ? "Update" : "Create"}

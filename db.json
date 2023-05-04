@@ -7,7 +7,7 @@
       "due_date": "2023-05-10",
       "priority": "high",
       "completed": false,
-      "assigned_to": 1,
+      "assigned_to": "johndoe",
       "labels": [
         "Groceries",
         "Shopping"
@@ -20,7 +20,7 @@
       "due_date": "2023-06-01",
       "priority": "medium",
       "completed": false,
-      "assigned_to": 2,
+      "assigned_to": "janesmith",
       "labels": [
         "Work",
         "Project"
@@ -33,7 +33,7 @@
       "due_date": "2023-05-15",
       "priority": "low",
       "completed": true,
-      "assigned_to": 1,
+      "assigned_to": "johndoe",
       "labels": [
         "Household",
         "Chores"
@@ -46,24 +46,8 @@
       "due_date": "2023-05-18",
       "priority": "High",
       "completed": false,
-      "assigned_to": 3,
+      "assigned_to": "Shigi",
       "labels": []
-    },
-    {
-      "title": "bhjdnd",
-      "description": "ngfjnfdjk",
-      "due_date": "2023-05-18",
-      "priority": "medium",
-      "completed": true,
-      "id": 5
-    },
-    {
-      "title": "jkfd n",
-      "description": "klmv  ",
-      "due_date": "2023-05-10",
-      "priority": "low",
-      "completed": false,
-      "id": 6
     },
     {
       "title": "erkjn",
@@ -71,15 +55,16 @@
       "due_date": "2023-05-18",
       "priority": "low",
       "completed": false,
-      "assigned_to": 15,
+      "assigned_to": "Bobby",
       "id": 7
     },
     {
-      "title": "eseff",
-      "description": "hgghv",
-      "due_date": "2023-05-28",
-      "priority": "low",
+      "title": "new",
+      "description": "newest",
+      "due_date": "2023-05-19",
+      "priority": "medium",
       "completed": false,
+      "assigned_to": "Emmanuel",
       "id": 8
     }
   ],

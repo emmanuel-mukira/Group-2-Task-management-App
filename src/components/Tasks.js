@@ -111,8 +111,8 @@ function Task({ userId , onTaskCreated,username }) {
 
   return (
     <div>
-      <h2>Tasks</h2>
-      <form onSubmit={editingTask ? (event) => handleEditSubmit(event, editingTask.id) : handleSubmit}>
+      <h2 className='tasks-title'>Tasks</h2>
+      <form onSubmit={editingTask ? (event) => handleEditSubmit(event, editingTask.id) : handleSubmit} className='tasks-form'>
         <input
           type="text"
           name="title"

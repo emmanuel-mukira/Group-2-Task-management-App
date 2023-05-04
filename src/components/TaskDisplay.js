@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./TaskDisplay.css";
 export default function TaskDisplay({tasks,handleDeleteClick,handleEditClick}) {
   if (!tasks) {
     return <div></div>
@@ -7,8 +7,8 @@ export default function TaskDisplay({tasks,handleDeleteClick,handleEditClick}) {
 
   return (
     <div>
-      <h3>Task List</h3>
-        <table>
+      <h3 className="task-display">Task List</h3>
+        <table className="task-table">
           <thead>
             <tr>
               <th>Title</th>

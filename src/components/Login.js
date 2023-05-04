@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Login.css';
 
 function Login({ users, onLogin, onSignUp, setCurrentUser }) {
   console.log(setCurrentUser);
@@ -39,21 +40,23 @@ function Login({ users, onLogin, onSignUp, setCurrentUser }) {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="login">
+      
       {error && <p>{error}</p>}
       <form onSubmit={handleFormSubmit}>
+      <h2>Login</h2>
         <div>
           <label>Username:</label>
           <input type="text" value={username} onChange={handleUsernameChange} />
         </div>
+        <br/>
         <div>
           <label>Password:</label>
           <input type="password" value={password} onChange={handlePasswordChange} />
         </div>
         <button type="submit">Login</button>
       </form>
-      <p>Don't have an account? <a href="/signup" >Sign up</a></p>
+      <p>Don't have an account? <a href="/signup" ><span>Sign up</span></a></p>
     </div>
   );
 }

@@ -110,9 +110,9 @@ function Task({ userId , onTaskCreated,username }) {
   };
 
   return (
-    <div>
-      <h2 className='tasks-title'>Tasks</h2>
+    <div className='tasks'>
       <form onSubmit={editingTask ? (event) => handleEditSubmit(event, editingTask.id) : handleSubmit} className='tasks-form'>
+      <h2 className='tasks-title'>Add Task</h2>
         <input
           type="text"
           name="title"
